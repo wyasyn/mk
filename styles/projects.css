@@ -174,7 +174,7 @@ main .project .heading h2 {
   font-family: "Recoleta";
   font-style: normal;
   font-size: 7vw;
-  font-weight: 400;
+  font-weight: 500;
 }
 main .project .projects {
   display: grid;
@@ -205,10 +205,9 @@ main .project .projects .work_1 .card img:hover {
 }
 main .project .projects .work_1 .card .hello h3 {
   font-family: "Recoleta";
-  font-family: "Recoleta";
   font-style: normal;
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 500;
 }
 main .project .projects .work_1 .card .hello p {
   font-family: Proximanova, sans-serif;
@@ -240,7 +239,7 @@ main .project .projects .work_2 .card .hello h3 {
   font-family: "Recoleta";
   font-style: normal;
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 500;
 }
 main .project .projects .work_2 .card .hello p {
   font-family: Proximanova, sans-serif;

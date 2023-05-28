@@ -195,7 +195,7 @@ main .about .col-1 h2 {
   font-family: "Recoleta";
   font-style: normal;
   font-size: 3rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 main .about .col-2 {
   align-self: center;
@@ -219,7 +219,7 @@ main .project .heading h2 {
   font-family: "Recoleta";
   font-style: normal;
   font-size: 3rem;
-  font-weight: bold;
+  font-weight: 500;
 }
 main .project .projects {
   display: grid;
@@ -253,7 +253,7 @@ main .project .projects .work_1 .card .hello h3 {
   font-family: "Recoleta";
   font-style: normal;
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 500;
 }
 main .project .projects .work_1 .card .hello p {
   font-family: Proximanova, sans-serif;
@@ -285,7 +285,7 @@ main .project .projects .work_2 .card .hello h3 {
   font-family: "Recoleta";
   font-style: normal;
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 500;
 }
 main .project .projects .work_2 .card .hello p {
   font-family: Proximanova, sans-serif;
@@ -311,7 +311,7 @@ main .services .heading h2 {
   font-family: "Recoleta";
   font-style: normal;
   font-size: 3rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 main .services .service {
   display: grid;
