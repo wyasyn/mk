@@ -12,6 +12,7 @@ html {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 body {
@@ -33,7 +34,7 @@ main {
 }
 
 header {
-  background-image: linear-gradient(to right, black, rgba(0, 0, 0, 0.5)), url("/img/bg.jpg");
+  background-image: linear-gradient(to bottom right, black, rgba(0, 0, 0, 0.5)), url("/img/bg.jpg");
   background-position: center;
   background-size: cover;
   color: whitesmoke;
@@ -459,7 +460,7 @@ footer .container .row .contact p a:hover {
 }
 @media screen and (max-width: 650px) {
   header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/img/about_1.jpg");
+    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url("/img/about_1.jpg");
   }
   header .header nav .mobile_menu .aside {
     padding-left: 1em;
