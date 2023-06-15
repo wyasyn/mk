@@ -299,31 +299,65 @@ main {
     }
 }
 footer {
-    background: black;
+    -webkit-border-radius: 0 100px 0 0;
+    -moz-border-radius: 0 100px 0 0;
+    -ms-border-radius: 0 100px 0 0;
+    -o-border-radius: 0 100px 0 0;
+    border-radius: 0 100px 0 0;
+    background: #121212;
     color: whitesmoke;
-    height: 40vh;
+    min-height: 300px;
+    @media screen and (width<=768px) {
+        min-height: 600px;
+    }
     .container {
         .row {
             max-width: 1200px;
             margin: 10em auto 3em auto;
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 3rem;
             padding: 1em;
+            @media screen and (width<=768px) {
+                grid-template-columns: 1fr;
+            }
             .logo-footer {
                 display: flex;
                 flex-direction: column;
-                align-items: center;
-                justify-content: center;
                 gap: 2rem;
+                align-items: center;
+              .logo {
+                display: flex;
+                gap: .8rem;
+                align-items: center;
+                justify-content: start;
                 img {
-                    width: 100px;
+                    width: 50px;
+                    -webkit-transition: transform .5s;
+                    -moz-transition: transform .5s;
+                    -ms-transition: transform .5s;
+                    -o-transition: transform .5s;
+                    transition: transform .5s;  
                 }
-                p {
-                    font-family: Proximanova, sans-serif;
-                    font-size: 1.5rem;
+                .name {
+                    color: whitesmoke;
+                    font-size: 1.7rem;
                     text-transform: uppercase;
                 }
+                &:hover {
+                    img {
+                               -webkit-transform: translateX(-5px);
+                               -moz-transform: translateX(-5px);
+                               -ms-transform: translateX(-5px);
+                               -o-transform: translateX(-5px);
+                               transform: translateX(-5px);
+                            }
+                    
+                    .name {
+                        color: rgb(65, 56, 4);
+                    }
+                }
+              }
             }
             .contact {
                 display: flex;
@@ -353,6 +387,17 @@ footer {
                    }
                 }
             }
+            .copy {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: start;
+                gap: 2rem;
+                .social {
+                    display: flex;
+                    gap: 2rem;
+                }
+            }
         }
     }
 }
@@ -370,14 +415,7 @@ footer {
       main .project .projects .work_2 .card {
         width: 100%;
       }
-    footer {
-        width: 100%;
-        height: 75vh;
-      }
-    footer .container .row {
-        grid-template-columns: 1fr;
-        gap: 3em;
-      }
+
 }
 @media screen and (max-width:650px) {
     header .header nav .mobile_menu .aside {
@@ -413,9 +451,6 @@ footer {
       }
       header .header nav .menu {
         top: 1rem;
-      }
-      footer .container .row .logo-footer p {
-        font-size: 1rem;
       }
 }
 @media screen and (max-width:500px) {

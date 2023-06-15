@@ -34,11 +34,13 @@ main {
 }
 
 header {
-  background-image: linear-gradient(to bottom right, black, rgba(0, 0, 0, 0.5)), url("/img/bg.jpg");
-  background-position: center;
-  background-size: cover;
+  background-image: url("/img/bg-patterns.svg"), linear-gradient(to right, #121212, #121212);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  border-radius: 0 0 0 100px;
   color: whitesmoke;
-  height: 80vh;
+  min-height: 60vh;
 }
 header .header {
   display: flex;
@@ -167,7 +169,7 @@ header .header nav.active .menu .icon {
 header .heading {
   text-align: left;
   margin-left: 7em;
-  margin-top: 14em;
+  margin-top: 10em;
 }
 header .heading strong {
   font-family: Proximanova, sans-serif;
@@ -350,32 +352,55 @@ main .services .service .content p {
 }
 
 footer {
-  background: black;
+  border-radius: 0 100px 0 0;
+  background: #121212;
   color: whitesmoke;
-  height: 40vh;
+  min-height: 300px;
+}
+@media screen and (width <= 768px) {
+  footer {
+    min-height: 600px;
+  }
 }
 footer .container .row {
   max-width: 1200px;
   margin: 10em auto 3em auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
   padding: 1em;
+}
+@media screen and (width <= 768px) {
+  footer .container .row {
+    grid-template-columns: 1fr;
+  }
 }
 footer .container .row .logo-footer {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   gap: 2rem;
+  align-items: center;
 }
-footer .container .row .logo-footer img {
-  width: 100px;
+footer .container .row .logo-footer .logo {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  justify-content: start;
 }
-footer .container .row .logo-footer p {
-  font-family: Proximanova, sans-serif;
-  font-size: 1.5rem;
+footer .container .row .logo-footer .logo img {
+  width: 50px;
+  transition: transform 0.5s;
+}
+footer .container .row .logo-footer .logo .name {
+  color: whitesmoke;
+  font-size: 1.7rem;
   text-transform: uppercase;
+}
+footer .container .row .logo-footer .logo:hover img {
+  transform: translateX(-5px);
+}
+footer .container .row .logo-footer .logo:hover .name {
+  color: rgb(65, 56, 4);
 }
 footer .container .row .contact {
   display: flex;
@@ -401,11 +426,23 @@ footer .container .row .contact p a {
 footer .container .row .contact p a:hover {
   color: rgb(51, 44, 5);
 }
+footer .container .row .copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 2rem;
+}
+footer .container .row .copy .social {
+  display: flex;
+  gap: 2rem;
+}
 
 /* Media-queries*/
 @media screen and (max-width: 995px) {
   header .heading {
-    margin-top: 10em;
+    margin-top: 3em;
+    margin-left: 6em;
   }
   main .about {
     grid-template-columns: 1fr;
@@ -438,17 +475,10 @@ footer .container .row .contact p a:hover {
   main .services .service img {
     grid-area: m;
   }
-  footer {
-    height: 75vh;
-  }
-  footer .container .row {
-    grid-template-columns: 1fr;
-    gap: 3em;
-  }
 }
-@media screen and (max-width: 7600px) {
+@media screen and (max-width: 760px) {
   header .heading {
-    margin-top: 10em;
+    margin-top: 5em;
     margin-left: 4em;
   }
   header .heading .strong {
@@ -459,9 +489,6 @@ footer .container .row .contact p a:hover {
   }
 }
 @media screen and (max-width: 650px) {
-  header {
-    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url("/img/about_1.jpg");
-  }
   header .header nav .mobile_menu .aside {
     padding-left: 1em;
   }
@@ -472,7 +499,7 @@ footer .container .row .contact p a:hover {
     font-size: 1rem;
   }
   header .heading {
-    margin-top: 10em;
+    margin-top: 7em;
     margin-left: 4em;
   }
   header .heading .strong {
@@ -496,7 +523,7 @@ footer .container .row .contact p a:hover {
     top: 1rem;
   }
   header .heading {
-    margin-top: 14em;
+    margin-top: 10em;
   }
   header .heading .strong {
     font-size: 10px;
@@ -504,22 +531,19 @@ footer .container .row .contact p a:hover {
   header .heading h1 {
     font-size: 3rem;
   }
-  footer .container .row .logo-footer p {
-    font-size: 1rem;
-  }
 }
 @media screen and (max-width: 400px) {
   header {
-    height: 60vh;
+    min-height: 60vh;
   }
   header .header nav .mobile_menu .aside {
     display: none;
   }
   header .heading {
-    margin-top: 10em;
+    margin-top: 7em;
   }
   header .heading {
-    margin-left: 1em;
+    margin-left: 3em;
   }
   header .heading .strong {
     font-size: 7px;
